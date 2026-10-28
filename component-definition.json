@@ -86,7 +86,8 @@
                 "template": {
                   "model": "tabs-section",
                   "filter": "tabs",
-                  "style": "tabs"
+                  "style": "tabs",
+                  "name": "Tabs Section"
                 }
               }
             }
