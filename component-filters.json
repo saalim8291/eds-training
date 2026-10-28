@@ -3,7 +3,7 @@
     "id": "main",
     "components": [
       "section",
-      "tabs"
+      "tabs-section"
     ]
   },
   {
@@ -18,6 +18,12 @@
       "columns",
       "fragment",
       "radio-group"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "text"
     ]
   },
   {
@@ -45,13 +51,6 @@
     "id": "radio-group",
     "components": [
       "radio-option"
-    ]
-  },
-  {
-    "id": "tabs",
-    "components": [
-      "text",
-      "image"
     ]
   }
 ]

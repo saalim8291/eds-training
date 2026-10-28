@@ -1,15 +1,16 @@
 {
   "definitions": [
     {
-      "title": "Tabs",
-      "id": "tabs",
+      "title": "Tabs Section",
+      "id": "tabs-section",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/section/v1/section",
             "template": {
-              "model": "tabs",
-              "name": "Tabs"
+              "model": "tabs-section",
+              "filter": "tabs",
+              "style": "tabs"
             }
           }
         }
@@ -18,12 +19,13 @@
   ],
   "models": [
     {
-      "id": "tabs",
+      "id": "tabs-section",
       "fields": [
         {
-          "component": "richtext",
-          "name": "name",
-          "label": "Tab content"
+          "component": "text",
+          "valueType": "string",
+          "name": "id",
+          "label": "ID"
         }
       ]
     }
@@ -31,10 +33,7 @@
   "filters": [
     {
       "id": "tabs",
-      "components": [
-        "text",
-        "image"
-      ]
+      "components": ["text"]
     }
   ]
 }

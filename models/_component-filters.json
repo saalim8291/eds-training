@@ -1,18 +1,9 @@
 [
   {
     "id": "main",
-    "components": [
-      "section",
-      "tabs"
-    ]
+    "components": ["section", "tabs-section"]
   },
-  {
-    "...": "./_section.json#/filters"
-  },
-  {
-    "...": "../blocks/*/_*.json#/filters"
-  },
-  {
-    "...": "./_tabs.json#/filters"
-  }
+  { "...": "./_section.json#/filters" },
+  { "...": "./_tabs.json#/filters" },
+  { "...": "../blocks/*/_*.json#/filters" }
 ]

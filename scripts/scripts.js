@@ -110,9 +110,64 @@ export function decorateButtons(main) {
   });
 }
 
+let tabsCounter = 0;
+
+/**
+ * Groups consecutive "Tabs Section" sections into one tabbed area.
+ * Tab title = first heading in the section. ID field = the section's HTML id.
+ * @param {Element} main The main element
+ */
 function decorateTabs(main) {
   const sections = [...main.querySelectorAll(':scope > .section.tabs:not([data-tabs-ready])')];
-  console.log(sections, 'sections');
+  if (!sections.length) return;
+
+  // 1. Group sections that sit next to each other
+  const groups = [];
+  sections.forEach((section) => {
+    const lastGroup = groups[groups.length - 1];
+    const prev = lastGroup?.[lastGroup.length - 1];
+    if (prev && prev.nextElementSibling === section) lastGroup.push(section);
+    else groups.push([section]);
+  });
+
+  groups.forEach((group) => {
+    // 2. Tab bar (a <nav>, so EDS never treats it as a section)
+    const tablist = document.createElement('nav');
+    tablist.className = 'tabs-list';
+    tablist.setAttribute('role', 'tablist');
+
+    group.forEach((section, i) => {
+      tabsCounter += 1;
+      const panelId = section.dataset.id || `tabpanel-${tabsCounter}`;
+
+      section.dataset.tabsReady = 'true';
+      section.id = panelId;
+      section.setAttribute('role', 'tabpanel');
+      section.hidden = i !== 0;
+
+      // 3. Title from the first heading in the section
+      const heading = section.querySelector('h1, h2, h3, h4, h5, h6');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'tabs-tab';
+      button.setAttribute('role', 'tab');
+      button.setAttribute('aria-controls', panelId);
+      button.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      button.textContent = heading?.textContent.trim() || `Tab ${i + 1}`;
+
+      // 4. Show the clicked panel, hide the others
+      button.addEventListener('click', () => {
+        group.forEach((panel, j) => { panel.hidden = j !== i; });
+        [...tablist.children].forEach((btn, j) => {
+          btn.setAttribute('aria-selected', j === i ? 'true' : 'false');
+        });
+      });
+
+      tablist.append(button);
+    });
+
+    group[0].before(tablist);
+  });
 }
 
 /**
