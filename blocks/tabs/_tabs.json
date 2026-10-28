@@ -55,9 +55,7 @@
   "filters": [
     {
       "id": "tabs",
-      "components": [
-        "tab"
-      ]
+      "components": []
     }
   ]
 }
