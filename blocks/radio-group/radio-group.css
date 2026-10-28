@@ -1,0 +1,24 @@
+.radio-group-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-group-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.radio-group-option input[type="radio"] {
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--link-color);
+}
+
+.radio-group-option label {
+  cursor: pointer;
+}

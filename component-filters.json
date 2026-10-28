@@ -38,5 +38,17 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "radio-group",
+    "components": [
+      "radio-option"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab"
+    ]
   }
 ]

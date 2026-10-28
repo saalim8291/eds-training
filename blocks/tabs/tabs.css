@@ -1,0 +1,36 @@
+.tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--light-color);
+}
+
+.tabs-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 0.6em 1em;
+  font: inherit;
+  font-weight: 500;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.tabs-tab:hover,
+.tabs-tab:focus-visible {
+  color: var(--link-color);
+}
+
+.tabs-tab[aria-selected="true"] {
+  border-bottom-color: var(--link-color);
+  color: var(--link-color);
+}
+
+.tabs-panels {
+  padding: 1em 0;
+}
+
+.tabs-panel[hidden] {
+  display: none;
+}
