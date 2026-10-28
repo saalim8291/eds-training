@@ -16,7 +16,6 @@
       "cards",
       "columns",
       "fragment",
-      "tabs",
       "radio-group"
     ]
   },
@@ -49,6 +48,8 @@
   },
   {
     "id": "tabs",
-    "components": []
+    "components": [
+      "text"
+    ]
   }
 ]
