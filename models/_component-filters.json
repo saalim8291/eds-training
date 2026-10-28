@@ -11,5 +11,8 @@
   },
   {
     "...": "../blocks/*/_*.json#/filters"
+  },
+  {
+    "...": "./_tabs.json#/filters"
   }
 ]

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import {
   loadHeader,
   loadFooter,
@@ -109,6 +110,11 @@ export function decorateButtons(main) {
   });
 }
 
+function decorateTabs(main) {
+  const sections = [...main.querySelectorAll(':scope > .section.tabs:not([data-tabs-ready])')];
+  console.log(sections, 'sections');
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -118,6 +124,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateTabs(main);
   decorateBlocks(main);
   decorateButtons(main);
 }
