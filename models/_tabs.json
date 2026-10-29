@@ -32,7 +32,8 @@
           "valueType": "string",
           "name": "style",
           "label": "Style",
-          "value": "tabs"
+          "value": "tabs",
+          "hidden": true
         }
       ]
     }

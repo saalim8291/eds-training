@@ -8,17 +8,7 @@ export default function decorate(block) {
     descRow,
     contentRow,
     linkRow,
-    alignRow,
-    bgRow,
   ] = block.children;
-
-  const bgValue = bgRow?.textContent.trim().toLowerCase();
-  bgRow?.remove();
-  if (bgValue) block.classList.add(`bg-${bgValue}`);
-
-  const alignValue = alignRow?.textContent.trim().toLowerCase();
-  alignRow?.remove();
-  if (alignValue) block.classList.add(`align-${alignValue}`);
 
   const iconImg = iconRow?.querySelector('img');
   if (iconImg) {

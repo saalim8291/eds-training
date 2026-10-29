@@ -155,7 +155,8 @@
         "valueType": "string",
         "name": "style",
         "label": "Style",
-        "value": "tabs"
+        "value": "tabs",
+        "hidden": true
       }
     ]
   },
@@ -297,7 +298,7 @@
       },
       {
         "component": "select",
-        "name": "alignment",
+        "name": "classes_alignment",
         "label": "Alignment",
         "options": [
           {
@@ -306,17 +307,17 @@
           },
           {
             "name": "Center",
-            "value": "center"
+            "value": "align-center"
           },
           {
             "name": "Right",
-            "value": "right"
+            "value": "align-right"
           }
         ]
       },
       {
         "component": "select",
-        "name": "backgroundColor",
+        "name": "classes_backgroundColor",
         "label": "Background Color",
         "options": [
           {
@@ -325,15 +326,15 @@
           },
           {
             "name": "Light",
-            "value": "light"
+            "value": "bg-light"
           },
           {
             "name": "Highlight",
-            "value": "highlight"
+            "value": "bg-highlight"
           },
           {
             "name": "Accent",
-            "value": "accent"
+            "value": "bg-accent"
           }
         ]
       }
