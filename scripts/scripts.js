@@ -170,6 +170,15 @@ function decorateTabs(main) {
   });
 }
 
+function refreshTabLabels(main) {
+  main.querySelectorAll('.section.tabs[data-tabs-ready]').forEach((section) => {
+    const heading = section.querySelector('h1, h2, h3, h4, h5, h6');
+    if (!heading) return;
+    const button = main.querySelector(`.tabs-tab[aria-controls="${section.id}"]`);
+    if (button) button.textContent = heading.textContent.trim();
+  });
+}
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -196,6 +205,7 @@ async function loadEager(doc) {
     decorateMain(main);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
+    refreshTabLabels(main);
   }
 
   try {
@@ -217,6 +227,7 @@ async function loadLazy(doc) {
 
   const main = doc.querySelector('main');
   await loadSections(main);
+  refreshTabLabels(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

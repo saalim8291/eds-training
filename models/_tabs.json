@@ -34,7 +34,7 @@
   "filters": [
     {
       "id": "tabs",
-      "components": ["text"]
+      "components": ["text", "tab-content"]
     }
   ]
 }

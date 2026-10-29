@@ -23,7 +23,8 @@
   {
     "id": "tabs",
     "components": [
-      "text"
+      "text",
+      "tab-content"
     ]
   },
   {
