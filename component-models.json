@@ -154,7 +154,7 @@
         "component": "text",
         "valueType": "string",
         "name": "style",
-        "label": "Style (do not edit)",
+        "label": "Style",
         "value": "tabs"
       }
     ]
