@@ -33,14 +33,14 @@
   margin: 0;
 }
 
-.intro-banner-secondary-link {
+.intro-banner .intro-banner-secondary-link:any-link {
   font-weight: 600;
   color: var(--text-color);
   text-decoration: none;
 }
 
-.intro-banner-secondary-link:hover,
-.intro-banner-secondary-link:focus-visible {
+.intro-banner .intro-banner-secondary-link:hover,
+.intro-banner .intro-banner-secondary-link:focus-visible {
   text-decoration: underline;
 }
 
