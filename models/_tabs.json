@@ -10,7 +10,6 @@
             "template": {
               "model": "tabs-section",
               "filter": "tabs",
-              "style": "tabs",
               "name": "Tabs Section"
             }
           }
@@ -27,6 +26,13 @@
           "valueType": "string",
           "name": "id",
           "label": "ID"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "style",
+          "label": "Style (do not edit)",
+          "value": "tabs"
         }
       ]
     }

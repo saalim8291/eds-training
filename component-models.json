@@ -149,6 +149,13 @@
         "valueType": "string",
         "name": "id",
         "label": "ID"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "style",
+        "label": "Style (do not edit)",
+        "value": "tabs"
       }
     ]
   },
