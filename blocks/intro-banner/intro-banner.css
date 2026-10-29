@@ -33,17 +33,6 @@
   margin: 0;
 }
 
-.intro-banner .intro-banner-secondary-link:any-link {
-  font-weight: 600;
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.intro-banner .intro-banner-secondary-link:hover,
-.intro-banner .intro-banner-secondary-link:focus-visible {
-  text-decoration: underline;
-}
-
 @media (width >= 900px) {
   .intro-banner {
     grid-template-columns: 1fr 1fr;
