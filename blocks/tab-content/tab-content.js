@@ -1,35 +1,33 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorate(block) {
-  const row = block.firstElementChild;
-  if (!row) return;
-  const [titleCol, descCol, contentCol, bgCol] = row.children;
+  const [titleRow, descRow, contentRow, bgRow] = block.children;
 
-  const bgValue = bgCol?.textContent.trim().toLowerCase();
-  bgCol?.remove();
+  const bgValue = bgRow?.textContent.trim().toLowerCase();
+  bgRow?.remove();
   if (bgValue) block.classList.add(`bg-${bgValue}`);
 
-  if (titleCol) {
+  if (titleRow) {
     const heading = document.createElement('h3');
-    heading.textContent = titleCol.textContent.trim();
-    moveInstrumentation(titleCol, heading);
-    titleCol.replaceWith(heading);
+    heading.textContent = titleRow.textContent.trim();
+    moveInstrumentation(titleRow, heading);
+    titleRow.replaceWith(heading);
   }
 
-  if (descCol) {
-    const text = descCol.textContent.trim();
+  if (descRow) {
+    const text = descRow.textContent.trim();
     if (text) {
       const desc = document.createElement('p');
       desc.className = 'tab-content-description';
       desc.textContent = text;
-      moveInstrumentation(descCol, desc);
-      descCol.replaceWith(desc);
+      moveInstrumentation(descRow, desc);
+      descRow.replaceWith(desc);
     } else {
-      descCol.remove();
+      descRow.remove();
     }
   }
 
-  if (contentCol) {
-    contentCol.className = 'tab-content-body';
+  if (contentRow) {
+    contentRow.className = 'tab-content-body';
   }
 }
