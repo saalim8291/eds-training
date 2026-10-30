@@ -40,12 +40,9 @@ export default function decorate(block) {
 
   const secondaryLink = secondaryLinkRow?.querySelector('a[href]');
   if (secondaryLink) {
-    secondaryLink.className = 'button secondary';
-    const secondaryWrapper = document.createElement('p');
-    secondaryWrapper.className = 'button-wrapper';
+    secondaryLink.className = 'intro-banner-secondary-link';
     moveInstrumentation(secondaryLinkRow, secondaryLink);
-    secondaryWrapper.append(secondaryLink);
-    actions.append(secondaryWrapper);
+    actions.append(secondaryLink);
   }
 
   if (actions.children.length) content.append(actions);
