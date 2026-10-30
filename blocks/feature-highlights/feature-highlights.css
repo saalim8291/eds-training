@@ -61,6 +61,8 @@
 
   .feature-highlights-header {
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 0;
   }
 
@@ -72,8 +74,7 @@
   }
 
   .feature-highlights-header p {
-    flex: 1 1 auto;
-    max-width: 480px;
+    flex: 0 1 480px;
     padding-left: 40px;
   }
 
