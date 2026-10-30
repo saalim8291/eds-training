@@ -33,6 +33,42 @@
           "name": "description",
           "label": "Description",
           "value": ""
+        },
+        {
+          "component": "select",
+          "name": "classes_backgroundColor",
+          "label": "Background Color",
+          "value": "bg-green",
+          "options": [
+            {
+              "name": "Green",
+              "value": "bg-green"
+            },
+            {
+              "name": "Sky Blue",
+              "value": "bg-sky-blue"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes_alignment",
+          "label": "Alignment",
+          "value": "align-center",
+          "options": [
+            {
+              "name": "Left",
+              "value": "align-left"
+            },
+            {
+              "name": "Center",
+              "value": "align-center"
+            },
+            {
+              "name": "Right",
+              "value": "align-right"
+            }
+          ]
         }
       ]
     }

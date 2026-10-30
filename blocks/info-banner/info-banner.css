@@ -5,15 +5,35 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: 48px 24px;
-  background-color: #1b4f4f;
   color: #fff;
-  text-align: center;
   overflow: hidden;
+}
+
+.info-banner.bg-green {
+  background-color: #1b4f4f;
+}
+
+.info-banner.bg-sky-blue {
+  background-color: #2f8fc6;
 }
 
 .info-banner-content {
   max-width: 760px;
+}
+
+.info-banner.align-left .info-banner-content {
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.info-banner.align-center .info-banner-content {
   margin: 0 auto;
+  text-align: center;
+}
+
+.info-banner.align-right .info-banner-content {
+  margin: 0 0 0 auto;
+  text-align: right;
 }
 
 .info-banner h2 {
