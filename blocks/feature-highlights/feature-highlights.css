@@ -65,15 +65,15 @@
   }
 
   .feature-highlights-header h2 {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 auto;
+    max-width: 320px;
     padding-right: 24px;
     font-size: var(--heading-font-size-xl);
   }
 
   .feature-highlights-header p {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 1 1 auto;
+    max-width: 480px;
     padding-left: 40px;
   }
 
