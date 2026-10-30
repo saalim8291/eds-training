@@ -19,7 +19,8 @@
       "fragment",
       "radio-group",
       "intro-banner",
-      "info-banner"
+      "info-banner",
+      "feature-highlights"
     ]
   },
   {
@@ -48,6 +49,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "feature-highlights",
+    "components": [
+      "feature-item"
     ]
   },
   {
