@@ -39,7 +39,7 @@
 .info-banner h2 {
   margin: 0 0 16px;
   color: inherit;
-  font-size: var(--heading-font-size-xxl);
+  font-size: var(--heading-font-size-m);
 }
 
 .info-banner-content p {
@@ -54,6 +54,6 @@
   }
 
   .info-banner h2 {
-    font-size: var(--heading-font-size-l);
+    font-size: var(--heading-font-size-xxl);
   }
 }
